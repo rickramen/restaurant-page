@@ -1,5 +1,16 @@
 /* styles.css */
+
 body {
+    margin: 0;
     background-color: rebeccapurple;
-  }
-  
+}
+
+header {
+    justify-items: center;
+    border: 2px solid red;
+} 
+
+#content {
+    justify-items: center;
+    border: 2px solid yellow;
+}
