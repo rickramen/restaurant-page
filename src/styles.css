@@ -12,5 +12,10 @@ header {
 
 #content {
     justify-items: center;
+    text-align: center;
     border: 2px solid yellow;
+}
+
+.menu {
+    text-align: left; 
 }

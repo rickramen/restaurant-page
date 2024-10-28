@@ -34,11 +34,11 @@ const loadModule = (module) => {
 };
 
 // Button Click Event Listeners
-const homeButton = document.querySelector("#home");
+const homeButton = document.querySelector("#home-btn");
 homeButton.addEventListener("click", () => loadModule("home"));
 
-const menuButton = document.querySelector("#menu");
+const menuButton = document.querySelector("#menu-btn");
 menuButton.addEventListener("click", () => loadModule("menu"));
 
-const aboutButton = document.querySelector("#about");
+const aboutButton = document.querySelector("#about-btn");
 aboutButton.addEventListener("click", () => loadModule("about"));
