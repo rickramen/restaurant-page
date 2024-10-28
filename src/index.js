@@ -11,33 +11,34 @@ let currentModule = "home";
 // Default module
 loadHome();
 
-// Tab-switching logic for buttons
-const homeButton = document.querySelector("#home");
-homeButton.addEventListener("click", () => {
-  if (currentModule === "home") {
-    return;
+const loadModule = (module) => {
+  if (currentModule === module) {
+      return; 
   }
-  content.innerHTML = "";
-  currentModule = "home";
-  loadHome();
-});
+  content.innerHTML = ""; // Clear current content
+  currentModule = module; // Update with new content
+
+  switch (module) {
+      case "home":
+          loadHome();
+          break;
+      case "menu":
+          loadMenu();
+          break;
+      case "about":
+          loadAbout();
+          break;
+      default:
+          console.error(`Module ${module} not recognized.`);
+  }
+};
+
+// Button Click Event Listeners
+const homeButton = document.querySelector("#home");
+homeButton.addEventListener("click", () => loadModule("home"));
 
 const menuButton = document.querySelector("#menu");
-menuButton.addEventListener("click", () => {
-  if (currentModule === "menu") {
-    return;
-  }
-  content.innerHTML = "";
-  currentModule = "menu";
-  loadMenu();
-});
+menuButton.addEventListener("click", () => loadModule("menu"));
 
 const aboutButton = document.querySelector("#about");
-aboutButton.addEventListener("click", () => {
-  if (currentModule === "about") {
-    return;
-  }
-  content.innerHTML = "";
-  currentModule = "about";
-  loadAbout();
-});
+aboutButton.addEventListener("click", () => loadModule("about"));
