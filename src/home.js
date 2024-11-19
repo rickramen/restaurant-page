@@ -18,7 +18,6 @@ export function loadHome() {
     const img = document.createElement("img");
     img.src = burgerImage
     img.alt = "burgerImage";
-    img.width = "600";
     fragment.appendChild(img);
 
     content.appendChild(fragment);
